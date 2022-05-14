@@ -1,0 +1,44 @@
+/*
+- A data structure is a way to organize and access data
+    - Design involves designing abstract data types
+        - And associated functions/operations (e.g. adding, removing, retrieving, printing, freeing, sorting, etc.)
+- Comparing data structures (or algorithms): runtime complexity, the space complexity
+
+- Linked lists
+    - Chain of structs, each struct is called a node
+    - Each node contains a pointer to the next node in the chain
+        - Usually also contains some data/cargo
+    - Usually we have a "head" pointer pointing to the first node
+    - Usually the last node points to NULL
+        - Useful for checking for ending
+    - Usually have a head pointer pointing to the first node
+    - Ex. head->next->next points to null
+    - head node struct pointer (node *, struct node*);
+        - same for head->next
+        - same for head->next->next
+    - head->data
+    - each node has data and next
+- Indexing operations
+    - Access the first node: O(1)
+    - Access the last/nth node: O(n)
+- Insertion operations
+    - Insert at last/nth node: O(n)
+    - Need to change previous node to point to new node
+        - If changing head, may need to pass in a double pointer
+    - Have new node to point at next node
+- Deletion operations
+    - Delete last/nth node: O(n)
+    - Make a temp variable to grab first node
+    - Reconnect previous node to next node
+        - May need a double pointer if changing a head pointer
+    - Free the deleted node
+
+- Linked lists vs arrays
+    - Reallocating arrays can take a long time if the array has to be copied and moved
+        - Unoccupied space when array is not full
+    - Improving linked lists
+        - Keep track of both head and tail
+        - Nesting lists
+    - Complexity diagram for operations of both in slides
+        - Pretty logical
+*/
